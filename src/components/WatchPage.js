@@ -2,17 +2,19 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { closeMenu } from '../utils/appSlice';
+import CommentsContainer from './CommentsContainer';
 
 const WatchPage = () => {
 
   const [searchParams]=useSearchParams();
-  console.log(searchParams.get("v"));
+ 
 
   const dispatch= useDispatch();
   useEffect(()=>{
     dispatch(closeMenu())
   }, []);
   return (
+    <div className='flex-column '>
     <div className='px-5'>
       <iframe width="880"
       height="480"
@@ -22,6 +24,8 @@ const WatchPage = () => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen>
       </iframe>
+    </div>
+    <CommentsContainer/>
     </div>
   )
 }
