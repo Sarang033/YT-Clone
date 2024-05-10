@@ -7,18 +7,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 
-{
-  /**
-   * head
-   * body
-   * sidebar
-   * menu item
-   * main container
-   * buttonslist
-   * videoxontainer
-   * videocard
-   */
-}
 
 const appRouter = createBrowserRouter([
   {
